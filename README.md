@@ -18,4 +18,7 @@ Click to see [Modification Parts List](https://docs.google.com/spreadsheets/d/17
 <br>a. Aluminum plate name and dimensions: Multipurpose 6061 Aluminum 1/4" Thick, 12" x 48"
 <br>a. For more information please refer to the CAD folder named "Middle Platform". 
 4. Securely fasten the cut aluminum plate to the chassis of the kart via 4 u-bolts. ![IMG_3715](https://github.com/augcog/roar_kart/assets/97138813/a4355a50-9b69-4f0e-a561-da4988ee9251)
-5. 
+5. Build middle plateform assembly. 
+<br>a. Load "Middle Platform Assembly v15.f3z" into a CAD software such as Autodesk Fusion 360.
+<br>b. Cut all angle irons to spec as shown in "All Angles" folder.
+<br>c. See the exact quantities according to the file shown in CAD Software. 
