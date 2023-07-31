@@ -14,8 +14,8 @@ Click to see [Modification Parts List](https://docs.google.com/spreadsheets/d/17
 <br>c. Preview the file named "Stack Assembly New with Fixed Holes v4.f3z" within the "Front Stack V2" folder.
 <br>d. Prepare all necessary materials as seen on the CAD file to begin installation.
 <br>e. Please refer to this [front stack installation overview video](https://www.youtube.com/watch?v=x0yttA2wSW8) should you run into troubles. 
-4. Send the aluminum plate to any machine shop to cut according to the CAD file named "Metal Board". This is where rear components such as the battery and computer will sit. 
+3. Send the aluminum plate to any machine shop to cut according to the CAD file named "Metal Board". This is where rear components such as the battery and computer will sit. 
 <br>a. Aluminum plate name and dimensions: Multipurpose 6061 Aluminum 1/4" Thick, 12" x 48"
 <br>a. For more information please refer to the CAD folder named "Middle Platform". 
-6. Securely fasten the cut aluminum plate to the chassis of the kart via 4 u-bolts.
-7. 
+4. Securely fasten the cut aluminum plate to the chassis of the kart via 4 u-bolts. ![IMG_3715](https://github.com/augcog/roar_kart/assets/97138813/a4355a50-9b69-4f0e-a561-da4988ee9251)
+5. 
