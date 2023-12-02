@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+ <root BTCPP_format="4" >
+     <BehaviorTree ID="MainTree">
+        <ReactiveSequence>
+            <Action ID="LatPIDtuner" pid_file_path="./src/launches/launches/config/carla/racing/pid.json" inputs="{inputs}" outputs="{outputs}"/>
+        </ReactiveSequence>
+     </BehaviorTree>
+ </root>

@@ -1,0 +1,9 @@
+/roar/behavior_planning_node:
+  ros__parameters:
+    debug: true
+    bt_xml_path: "./src/core/core/src/planning/behavior_planning/param/racing_behavior.xml"
+
+/roar/lifecycle_manager_behavior_planning_node:
+  ros__parameters:
+    node_names: ["/roar/behavior_planning_node"]
+    autostart: true

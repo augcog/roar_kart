@@ -1,0 +1,24 @@
+{
+      "channels": {
+            "kp": "lat_control.pid.kp",
+            "kd": "lat_control.pid.kd",
+            "ki": "lat_control.pid.ki"
+      },
+      "latitudinal_controller": {
+            "1": {
+                  "k_p": 0.8,
+                  "k_d": 0.1,
+                  "k_i": 0.1
+            },
+            "3": {
+                  "k_p": 0.6,
+                  "k_d": 0.2,
+                  "k_i": 0
+            },
+            "10": {
+                  "k_p": 0.2,
+                  "k_d": 0.1,
+                  "k_i": 0.1
+            }
+      }
+}

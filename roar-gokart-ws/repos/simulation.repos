@@ -1,0 +1,9 @@
+repositories:
+    simulation/carla:
+        type: git
+        url: git@gitlab.com:roar-gokart/simulation.git
+        version: develop
+    simulation/carla_scenario_runner:
+        type: git
+        url: git@gitlab.com:roar-gokart/carla-scenario-runner.git
+        version: develop

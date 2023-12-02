@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="gokart" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <gazebo>
+    <plugin name="simulator_gazebo_plugin" filename="libsimulator_gazebo_plugin.so">
+      <baseLinkName>base_link</baseLinkName>
+      <mapFrameName>map</mapFrameName>
+      <frontLeftSteeringJointName>wheel_fl_steer_joint</frontLeftSteeringJointName>
+      <frontRightSteeringJointName>wheel_fr_steer_joint</frontRightSteeringJointName>
+      <frontLeftMotorJointName>wheel_fl_joint</frontLeftMotorJointName>
+      <frontRightMotorJointName>wheel_fr_joint</frontRightMotorJointName>
+      <rearLeftMotorJointName>wheel_rl_joint</rearLeftMotorJointName>
+      <rearRightMotorJointName>wheel_rr_joint</rearRightMotorJointName>
+      <publishGroundTruthTransform>true</publishGroundTruthTransform>
+      <publishJointStates>true</publishJointStates>
+    </plugin>
+  </gazebo>
+
+</robot>

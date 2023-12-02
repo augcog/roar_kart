@@ -1,0 +1,22 @@
+roar:
+  local_planner_manager_node:
+    ros__parameters:
+      manager:
+        debug: true
+        loop_rate: 1000.0
+      use_sim_time: true
+      plugins: 
+        # - "roar::planning::local::SimpleDistancePlanner"
+        - "roar::planning::local::SimpleFrenetFramePlanner"
+      
+      SimpleDistancePlanner:
+        next_waypoint_dist: 10.0
+      
+      SimpleFrenetFramePlanner:
+        next_waypoint_dist: 10.0
+        
+lifecycle_manager_local_planning:
+  ros__parameters:
+    autostart: true
+    use_sim_time: true
+    node_names: ["/roar/local_planner_manager_node"]

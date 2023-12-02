@@ -1,0 +1,16 @@
+# Trajectory Generation interface
+
+# Request
+
+nav2_msgs/Costmap costmap
+nav_msgs/Odometry odom
+nav_msgs/Path global_path
+geometry_msgs/PoseStamped next_waypoint
+geometry_msgs/PolygonStamped footprint
+---
+
+# Result
+Trajectories trajectories
+---
+# Feedback
+Trajectory trajectory

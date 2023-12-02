@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+ <root BTCPP_format="4" >
+     <BehaviorTree ID="MainTree">
+        <ReactiveSequence>
+            <Condition ID="IfGoalReached" goal_radius="0.1" inputs="{inputs}"/>
+            <Action ID="StopCar" inputs="{inputs}" outputs="{outputs}"/>
+        </ReactiveSequence>
+     </BehaviorTree>
+ </root>

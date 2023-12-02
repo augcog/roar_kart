@@ -1,0 +1,5 @@
+manual_control:
+    ros__parameters:
+      loop_rate: 0.05
+      speed_increment: 0.1
+      angle_increment: 1.0

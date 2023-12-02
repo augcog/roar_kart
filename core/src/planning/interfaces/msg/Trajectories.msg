@@ -1,0 +1,3 @@
+# Trajectories.msg
+
+Trajectory[] trajectories

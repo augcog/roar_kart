@@ -1,0 +1,46 @@
+repositories:
+  gokart/arduino_comm:
+    type: git
+    url: git@gitlab.com:roar-gokart/arduino_comm.git
+    version: develop
+  gokart/central_arduino:
+    type: git
+    url: git@gitlab.com:roar-gokart/central_arduino.git
+    version: develop
+  gokart/livox_ros2_driver:
+    type: git
+    url: git@gitlab.com:roar-gokart/livox_ros2_driver.git
+    version: master
+  gokart/zed-ros2-wrapper:
+    type: git
+    url: git@gitlab.com:roar-gokart/zed-ros2-wrapper.git
+    version: develop
+  gokart/point_one_gps_driver:
+    type: git
+    url: git@gitlab.com:roar-gokart/point_one_gps_driver.git
+    version: develop
+  gokart/gokart_manual_controller:
+    type: git
+    url: git@gitlab.com:roar-gokart/gokart_manual_controller.git
+    version: develop
+  gokart/roar_gokart_msgs:
+    type: git
+    url: git@gitlab.com:roar-gokart/roar_gokart_msgs.git
+    version: develop
+  gokart/roar_gokart_interface:
+    type: git
+    url: git@gitlab.com:roar-gokart/roar_gokart_interface.git
+    version: develop
+  gokart/septentrio_gnss_driver:
+    type: git
+    url: git@gitlab.com:roar-gokart/septentrio_gnss_driver.git
+    version: ros2
+  gokart/roar_septentrio_interface:
+    type: git
+    url: git@gitlab.com:roar-gokart/roar_septentrio_interface.git
+    version: develop
+  gokart/roar_pointone_nav_interface:
+    type: git
+    url: git@gitlab.com:roar-gokart/roar_pointone_nav_interface.git
+    version: main
+  

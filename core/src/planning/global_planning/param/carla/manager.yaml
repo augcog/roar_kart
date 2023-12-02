@@ -1,0 +1,25 @@
+/roar/global_planner_manager:
+  ros__parameters:
+    debug: true
+    planner_name: "RacePlanner"
+    planner_frequency: 0.1
+    
+    RacePlanner:
+      waypoint_path: "./src/launches/launches/config/carla/waypoints.txt"
+      min_dist: 10.0
+
+    ParkingPlanner:
+      path_step: 1.0
+
+
+/roar/lifecycle_manager_global_planning:
+  ros__parameters:
+    autostart: true
+    use_sim_time: true
+    node_names: ["/roar/global_planner_manager"]
+
+/roar/lifecycle_manager_map_server:
+  ros__parameters:
+    autostart: true
+    use_sim_time: true
+    node_names: ["/roar/map_server"]

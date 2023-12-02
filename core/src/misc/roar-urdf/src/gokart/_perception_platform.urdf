@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<robot name="gokart" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:property name="stand_off_height" value="0.3"/>
+
+    <xacro:macro name="stand_off" params="prefix x y">
+        
+        <link name="perception_${prefix}_stand_off">
+            <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.05 0.05 ${stand_off_height}" />
+                <!-- <cylinder radius="${wheel_radius}" length="${wheel_width}" /> -->
+            </geometry>
+            <material name="Gray">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+            </visual>
+        </link>
+
+        <joint name="perception_${prefix}_stand_off_joint" type="fixed">
+            <parent link="base_link" />
+            <child link="perception_${prefix}_stand_off" />
+            <origin xyz="${x} ${y} ${stand_off_height/2}" rpy="0 0 0" />
+            <axis xyz="0 1 0" />
+        </joint>
+    </xacro:macro>
+
+
+    <xacro:stand_off prefix="front_right" x="1.05" y="-0.2"/>
+    <xacro:stand_off prefix="front_left" x="1.05" y="0.2"/>
+    <xacro:stand_off prefix="rear_right" x="0.8" y="-0.2"/>
+    <xacro:stand_off prefix="rear_left" x="0.8" y="0.2"/>
+
+
+
+    <link name="sensor_platform_lower">
+      <visual>
+        <origin xyz="0 0 0" rpy="0.0 0 0" />
+        <geometry>
+          <box size="0.3 0.5 0.01" />
+          <!-- <cylinder radius="${wheel_radius}" length="${wheel_width}" /> -->
+        </geometry>
+        <material name="Gray">
+          <color rgba="0.5 0.5 0.5 1.0" />
+        </material>
+      </visual>
+    </link>
+  
+
+    <joint name="sensor_platform_lower_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="sensor_platform_lower" />
+        <origin xyz="0.925 0 ${stand_off_height/2}" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+
+    <link name="sensor_platform_upper">
+      <visual>
+        <origin xyz="0 0 0" rpy="0.0 0 0" />
+        <geometry>
+          <box size="0.3 0.5 0.01" />
+        </geometry>
+        <material name="Gray">
+          <color rgba="0.5 0.5 0.5 1.0" />
+        </material>
+      </visual>
+    </link>
+  
+
+    <joint name="sensor_platform_upper_joint" type="fixed">
+        <parent link="sensor_platform_lower" />
+        <child link="sensor_platform_upper" />
+        <origin xyz="0.0 0 ${stand_off_height/2}" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+
+
+
+</robot>

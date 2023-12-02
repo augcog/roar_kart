@@ -1,0 +1,9 @@
+<library path="roar_rviz_plugin">
+
+  <class name="roar_rviz_plugin/ROARPanel"
+         type="roar_rviz_plugin::ROARPanel"
+         base_class_type="rviz_common::Panel">
+    <description>A tool used to manage vehicle lifecycle</description>
+  </class>
+
+</library>

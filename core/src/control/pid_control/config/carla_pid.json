@@ -1,0 +1,70 @@
+{
+  "longitudinal_controller": {
+    "1": {
+          "k_p": 0.8,
+          "k_d": 0.4,
+          "k_i": 0,
+          "i_clamp_min": 0,
+          "i_clamp_max": 0,
+          "antiwindup": false
+    },
+    "3": {
+          "k_p": 0.5,
+          "k_d": 0.3,
+          "k_i": 0,
+          "i_clamp_min": 0,
+          "i_clamp_max": 0,
+          "antiwindup": false
+    },
+    "5": {
+          "k_p": 0.3,
+          "k_d": 0.3,
+          "k_i": 0,
+          "i_clamp_min": 0,
+          "i_clamp_max": 0,
+          "antiwindup": false
+    },
+    "8": {
+          "k_p": 0.2,
+          "k_d": 0.2,
+          "k_i": 0.1,
+          "i_clamp_min": 0,
+          "i_clamp_max": 0,
+          "antiwindup": false
+        },
+     "20": {
+            "k_p": 0.05,
+            "k_d": 0.01,
+            "k_i": 0.1,
+            "i_clamp_min": 0,
+            "i_clamp_max": 0,
+            "antiwindup": false
+            }
+      },
+  "latitudinal_controller": {
+    "1": {
+          "k_p": 0.8,
+          "k_d": 0.1,
+          "k_i": 0.1,
+          "i_clamp_min": 0,
+          "i_clamp_max": 1,
+          "antiwindup": false
+    },
+    "3": {
+          "k_p": 0.6,
+          "k_d": 0.2,
+          "k_i": 0,
+          "i_clamp_min": 0,
+          "i_clamp_max": 1,
+          "antiwindup": false
+    },
+    "10": {
+          "k_p": 0.2,
+          "k_d": 0.1,
+          "k_i": 0.1,
+          "i_clamp_min": 0,
+          "i_clamp_max": 0.1,
+          "antiwindup": false
+    }
+  }
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<robot name="gokart" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <link name="sensor_base_link"></link>
+
+    <joint name="sensor_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="sensor_base_link" />
+      <origin xyz="${base_length} 0 ${sensor_platform_height}" rpy="0 0 0" />
+    </joint>
+
+
+    <!-- lidar -->
+<link name="left_lidar">
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find roar-gokart-urdf)/meshes/livox_horizon.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <origin xyz="${front_lidar_forward_offset} ${lidar_width/2} ${-lidar_height/2}" rpy="1.5708 0 3.14159" /> 
+        <material name="grey">
+            <color rgba="0.86 0.86 0.86 1.0"/>
+        </material>
+    </visual>
+</link>
+<joint name="left_lidar_joint" type="fixed">
+    <parent link="sensor_base_link"/>
+    <child link="left_lidar"/>
+    <origin xyz="0.0 ${side_lidar_offset} ${(base_height/2+lidar_height/2)}" rpy="0 0 1.047"/>
+</joint>
+
+<link name="center_lidar">
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find roar-gokart-urdf)/meshes/livox_horizon.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <origin xyz="${front_lidar_forward_offset} ${lidar_width/2} ${-lidar_height/2}" rpy="1.5708 0 3.14159" /> 
+        <material name="grey">
+            <color rgba="0.86 0.86 0.86 1.0"/>
+        </material>
+    </visual>
+</link>
+<joint name="center_lidar_joint" type="fixed">
+    <parent link="sensor_base_link"/>
+    <child link="center_lidar"/>
+    <origin xyz="${front_lidar_forward_offset} 0.0 ${(base_height/2+lidar_height/2)}" rpy="0 0 0"/>
+</joint>
+
+
+<link name="right_lidar">
+    <visual>
+        <geometry>
+            <mesh filename="file://$(find roar-gokart-urdf)/meshes/livox_horizon.stl" scale="0.001 0.001 0.001" />
+        </geometry>
+        <origin xyz="${front_lidar_forward_offset} ${lidar_width/2} ${-lidar_height/2}" rpy="1.5708 0 3.14159" /> 
+        <material name="grey">
+            <color rgba="0.86 0.86 0.86 1.0"/>
+        </material>
+    </visual>
+</link>
+<joint name="right_lidar_joint" type="fixed">
+    <parent link="sensor_base_link"/>
+    <child link="right_lidar"/>
+    <origin xyz="0.0 ${-side_lidar_offset} ${(base_height/2+lidar_height/2)}" rpy="0 0 -1.047"/>
+</joint>
+
+<!-- zed -->
+<link name="camera_link"></link>
+<joint name="zed_joint" type="fixed">
+    <parent link="center_lidar"/>
+    <child link="camera_link"/>
+    <origin xyz="0.0 0.0 ${lidar_height/2+zed_height/2}" rpy="0 0 0"/>
+</joint>
+
+
+
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>

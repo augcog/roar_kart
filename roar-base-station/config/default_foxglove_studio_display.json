@@ -1,0 +1,248 @@
+{
+  "configById": {
+    "3D!spsq1m": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 53.000686532782744,
+        "phi": 68.82533197139969,
+        "thetaOffset": 99.4228804903,
+        "targetOffset": [
+          8.803463429199251,
+          3.305034806266004,
+          -5.426448978440021e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {
+        "/initialpose": {
+          "visible": false
+        },
+        "/roar/front/lidar": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/roar/front/depth/image": {
+          "visible": false,
+          "frameLocked": true,
+          "cameraInfoTopic": "/roar/front/depth/camera_info",
+          "distance": 1,
+          "planarProjectionFactor": 0,
+          "color": "#ffffff"
+        },
+        "/roar/front/rgb/image": {
+          "visible": true,
+          "frameLocked": true,
+          "cameraInfoTopic": "/roar/front/rgb/camera_info",
+          "distance": 1,
+          "planarProjectionFactor": 0,
+          "color": "#ffffff"
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "map!3p204js": {
+      "center": {
+        "lat": -6.684693118287805,
+        "lon": -1.8440428139857268
+      },
+      "customTileUrl": "",
+      "disabledTopics": [],
+      "followTopic": "",
+      "layer": "map",
+      "topicColors": {},
+      "zoomLevel": 3,
+      "maxNativeZoom": 18
+    },
+    "Publish!2spbg8e": {
+      "buttonText": "Publish",
+      "buttonTooltip": "",
+      "advancedView": true,
+      "value": "{}"
+    },
+    "Parameters!249uirn": {
+      "title": "Parameters"
+    },
+    "Image!21gfsoq": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/roar/front/rgb/image",
+        "calibrationTopic": "/roar/front/rgb/camera_info"
+      }
+    },
+    "DiagnosticSummary!11rxpue": {
+      "minLevel": 0,
+      "pinnedIds": [],
+      "hardwareIdFilter": "",
+      "topicToRender": "/diagnostics",
+      "sortByLevel": true
+    },
+    "Indicator!uz7x5j": {
+      "path": "",
+      "style": "bulb",
+      "fallbackColor": "#a0a0a0",
+      "fallbackLabel": "False",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "true",
+          "color": "#68e24a",
+          "label": "True"
+        }
+      ],
+      "foxglovePanelTitle": "isEngaged"
+    },
+    "Plot!2tnckhp": {
+      "paths": [
+        {
+          "value": "/roar/vehicle/control.steering_angle",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "foxglovePanelTitle": "Steering Angle Request vs Response"
+    },
+    "Plot!1cqa0g": {
+      "paths": [
+        {
+          "value": "/roar/vehicle/control.target_speed",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "foxglovePanelTitle": "Target Speed Request vs Response"
+    },
+    "RosOut!3vtetbd": {
+      "searchTerms": [],
+      "minLogLevel": 1
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "row",
+    "first": {
+      "first": {
+        "first": "3D!spsq1m",
+        "second": "map!3p204js",
+        "direction": "column",
+        "splitPercentage": 75.55816686251468
+      },
+      "second": {
+        "first": "Publish!2spbg8e",
+        "second": "Parameters!249uirn",
+        "direction": "column"
+      },
+      "direction": "column",
+      "splitPercentage": 84.34093161546086
+    },
+    "second": {
+      "first": {
+        "first": "Image!21gfsoq",
+        "second": {
+          "first": "DiagnosticSummary!11rxpue",
+          "second": "Indicator!uz7x5j",
+          "direction": "row"
+        },
+        "direction": "row"
+      },
+      "second": {
+        "first": {
+          "first": "Plot!2tnckhp",
+          "second": "Plot!1cqa0g",
+          "direction": "row"
+        },
+        "second": "RosOut!3vtetbd",
+        "direction": "row",
+        "splitPercentage": 68.67256637168143
+      },
+      "direction": "column",
+      "splitPercentage": 35.38156590683845
+    },
+    "splitPercentage": 29.638854296388544
+  }
+}

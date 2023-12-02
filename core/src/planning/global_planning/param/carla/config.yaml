@@ -1,0 +1,14 @@
+global_planning_node:
+  ros__parameters:
+    debug: true
+    datum: "0.0,0.0,0.0"
+    gnss_file_path: "/home/michael/Desktop/projects/roar-gokart-ws/data/carla_town04/waypoint.txt"
+    next_waypoint_distance_threshold: 10.0
+    loop_rate_millis: 100
+
+
+lifecycle_manager_global_planning:
+  ros__parameters:
+    autostart: true
+    use_sim_time: true
+    node_names: ["/global_planning_node"]

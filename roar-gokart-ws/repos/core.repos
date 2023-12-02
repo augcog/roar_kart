@@ -1,0 +1,5 @@
+repositories:
+  core:
+    type: git
+    url: git@gitlab.com:roar-gokart/core.git
+    version: develop

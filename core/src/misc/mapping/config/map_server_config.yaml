@@ -1,0 +1,6 @@
+/map_server:
+  ros__parameters:
+    frame_id: map
+    topic_name: map
+    use_sim_time: false
+    yaml_filename: /home/michael/Desktop/projects/roar-gokart-ws/data/carla/map_1694661566.yaml

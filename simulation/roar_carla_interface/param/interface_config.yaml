@@ -1,0 +1,11 @@
+roar_carla_pid_node:
+    ros__parameters:
+      debug: true
+      throttle_kp: 1.0
+      throttle_kd: 0.0
+      throttle_ki: 0.0
+      steering_kp: 1.0
+      steering_kd: 0.0
+      steering_ki: 0.0
+      max_steering_angle_deg: 30.0
+

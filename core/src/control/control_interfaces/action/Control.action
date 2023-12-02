@@ -1,0 +1,18 @@
+# Request
+
+# the path to follow
+nav_msgs/Path path
+int32 target_spd
+bool overwrite_previous
+---
+
+# Result
+int8 NORMAL=1
+int8 FAILED=2
+
+int8 status
+---
+# Feedback
+
+# current executing index
+uint32 curr_index

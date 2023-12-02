@@ -1,0 +1,30 @@
+from launch import LaunchDescription
+from ament_index_python.packages import get_package_share_directory
+import launch_ros.actions
+import os
+import yaml
+from launch.substitutions import EnvironmentVariable
+import pathlib
+import launch.actions
+from launch.actions import DeclareLaunchArgument
+from pathlib import Path
+
+
+def generate_launch_description():
+    base_path = Path(get_package_share_directory("roar_manual_control"))
+    config_path: Path = base_path / "params" / "config.yaml"
+    assert config_path.exists(), f"{config_path} does not exist"
+    return LaunchDescription(
+        [
+            launch_ros.actions.Node(
+                package="roar_manual_control",
+                executable="roar_manual_controller_node",
+                name="roar_manual_control",
+                parameters=[config_path.as_posix()],
+                remappings=[
+                    ("roar/vehicle/control", "/roar/vehicle/control"),
+                    ("image", "/roar/front/rgb/image"),
+                ],
+            ),
+        ]
+    )

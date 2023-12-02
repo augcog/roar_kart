@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<robot name="gokart" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="stand_off_height" value="0.3"/>
+
+  <xacro:macro name="stand_off" params="prefix x y">
+      
+    <link name="compute_${prefix}_stand_off">
+      <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.1 0.1 ${stand_off_height}" />
+          <!-- <cylinder radius="${wheel_radius}" length="${wheel_width}" /> -->
+        </geometry>
+        <material name="Gray">
+          <color rgba="0.5 0.5 0.5 1.0" />
+        </material>
+      </visual>
+    </link>
+
+    <joint name="compute_${prefix}_stand_off_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="compute_${prefix}_stand_off" />
+      <origin xyz="${x} ${y} ${stand_off_height/2}" rpy="0 0 0" />
+      <axis xyz="0 1 0" />
+    </joint>
+  </xacro:macro>
+
+
+  <xacro:stand_off prefix="front_right" x="0.5" y="-0.3"/>
+  <xacro:stand_off prefix="front_left" x="0.5" y="0.3"/>
+  <xacro:stand_off prefix="rear_right" x="0.0" y="-0.3"/>
+  <xacro:stand_off prefix="rear_left" x="0.0" y="0.3"/>
+
+  <link name="compute_platform">
+      <visual>
+        <origin xyz="0 0 0" rpy="0.0 0 0" />
+        <geometry>
+          <box size="0.7 0.7 0.01" />
+          <!-- <cylinder radius="${wheel_radius}" length="${wheel_width}" /> -->
+        </geometry>
+        <material name="Gray">
+          <color rgba="0.5 0.5 0.5 1.0" />
+        </material>
+      </visual>
+  </link>
+  
+
+  <joint name="compute_unit_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="compute_platform" />
+    <origin xyz="0.25 0 ${stand_off_height}" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+
+  <xacro:property name="computer_x" value="0.0"/>
+  <xacro:property name="computer_y" value="0.0"/>
+  <xacro:property name="computer_z" value="0.01"/>
+  <xacro:property name="computer_mass" value="5.0"/> <!--kg-->
+  <xacro:property name="computer_width" value="0.05"/>
+  <xacro:property name="computer_height" value="0.4"/>
+  <xacro:property name="computer_depth" value="0.2"/>
+
+  <link name="compute_units_link">
+    <visual>
+      <geometry>
+        <box size="0.397 0.284 0.0259" />
+      </geometry>
+      <origin rpy="0 0.0 0" xyz="0.1 0 0"/> 
+        <material name="green">
+            <color rgba="0.0 0.5 0.0 1.0"/>
+        </material>
+    </visual>
+
+    <xacro:box_inertia m="${computer_mass}" w="${computer_width}" d="${computer_depth}" h="${computer_height}" />
+  </link>
+
+  <joint name="compute_units_joint" type="fixed">
+    <parent link="compute_platform" />
+    <child link="compute_units_link" />
+    <origin xyz="${computer_x} ${computer_y} ${computer_z} " />
+  </joint>
+</robot>

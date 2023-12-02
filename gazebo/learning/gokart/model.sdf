@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<sdf version='1.7'>
+  <model name='gokart'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.509065 0 0.019448 0 -0 0</pose>
+        <mass>79.7</mass>
+        <inertia>
+          <ixx>6.47708</ixx>
+          <ixy>2.77556e-16</ixy>
+          <ixz>0.401551</ixz>
+          <iyy>7.93038</iyy>
+          <iyz>-2.3187e-18</iyz>
+          <izz>13.3492</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__body_frame_link_collision'>
+        <pose>0.525 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>1.05 0.78 0.015</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__wheel_fl_link_collision_1'>
+        <pose>1.05 0.475 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.09525</length>
+            <radius>0.1397</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.3</mu>
+              <mu2>1.3</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode/>
+          </contact>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__wheel_fr_link_collision_2'>
+        <pose>1.05 -0.475 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.09525</length>
+            <radius>0.1397</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.3</mu>
+              <mu2>1.3</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode/>
+          </contact>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__wheel_rl_link_collision_3'>
+        <pose>0 0.475 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.09525</length>
+            <radius>0.1397</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__wheel_rr_link_collision_4'>
+        <pose>0 -0.475 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.09525</length>
+            <radius>0.1397</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__body_frame_link_visual'>
+        <pose>0 0 -0.015 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gokart/BodyV1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_front_left_stand_off_visual_1'>
+        <pose>0.5 0.3 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_front_right_stand_off_visual_2'>
+        <pose>0.5 -0.3 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_rear_left_stand_off_visual_3'>
+        <pose>0 0.3 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_rear_right_stand_off_visual_4'>
+        <pose>0 -0.3 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_platform_visual_5'>
+        <pose>0.25 0 0.3 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.7 0.7 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__antenna_front_left_stand_off_visual_6'>
+        <pose>0.15 0.3 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.2</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__antenna_front_right_stand_off_visual_7'>
+        <pose>0.15 -0.3 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.2</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__antenna_rear_left_stand_off_visual_8'>
+        <pose>-0.05 0.3 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.2</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__antenna_rear_right_stand_off_visual_9'>
+        <pose>-0.05 -0.3 0.4 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.2</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__compute_units_link_visual_10'>
+        <pose>0.35 0 0.31 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.397 0.284 0.0259</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__gps_platform_visual_11'>
+        <pose>0.05 0 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.7 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__gnss_visual_12'>
+        <pose>0.05 0 0.6 1.57 -0 1.57</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gps_antenna.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__perception_front_left_stand_off_visual_13'>
+        <pose>1.05 0.2 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__perception_front_right_stand_off_visual_14'>
+        <pose>1.05 -0.2 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__perception_rear_left_stand_off_visual_15'>
+        <pose>0.8 0.2 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__perception_rear_right_stand_off_visual_16'>
+        <pose>0.8 -0.2 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.3</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__sensor_platform_lower_visual_17'>
+        <pose>0.925 0 0.15 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.5 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__sensor_platform_upper_visual_18'>
+        <pose>0.925 0 0.3 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.5 0.01</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__center_lidar_visual_19'>
+        <pose>1.075 0.04 0.31 1.57 0 3.14</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/livox_horizon.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__camera_visual_20'>
+        <pose>1.025 0 0.41 0 -0 1.57</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/ZED2i.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__wheel_fl_link_visual_21'>
+        <pose>1.05 0.57025 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gokart/WheelV1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__wheel_fr_link_visual_22'>
+        <pose>1.05 -0.37975 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gokart/WheelV1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__wheel_rl_link_visual_23'>
+        <pose>0 0.57025 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gokart/WheelV1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__wheel_rr_link_visual_24'>
+        <pose>0 -0.37975 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/michael/Desktop/projects/roar-gokart-ws/install/roar-urdf/share/roar-urdf/meshes/gokart/WheelV1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <static>0</static>
+    <plugin name='simulator_gazebo_plugin' filename='libsimulator_gazebo_plugin.so'>
+      <baseLinkName>base_link</baseLinkName>
+      <mapFrameName>map</mapFrameName>
+      <frontLeftSteeringJointName>wheel_fl_steer_joint</frontLeftSteeringJointName>
+      <frontRightSteeringJointName>wheel_fr_steer_joint</frontRightSteeringJointName>
+      <frontLeftMotorJointName>wheel_fl_joint</frontLeftMotorJointName>
+      <frontRightMotorJointName>wheel_fr_joint</frontRightMotorJointName>
+      <rearLeftMotorJointName>wheel_rl_joint</rearLeftMotorJointName>
+      <rearRightMotorJointName>wheel_rr_joint</rearRightMotorJointName>
+      <publishGroundTruthTransform>1</publishGroundTruthTransform>
+      <publishJointStates>1</publishJointStates>
+    </plugin>
+  </model>
+</sdf>

@@ -1,0 +1,4 @@
+<library path="local_planner_manager">
+  <class type="roar::planning::local::SimpleDistancePlanner" base_class_type="roar::planning::local::LocalPlannerPlugin" />
+  <class type="roar::planning::local::SimpleFrenetFramePlanner" base_class_type="roar::planning::local::LocalPlannerPlugin" />
+</library>

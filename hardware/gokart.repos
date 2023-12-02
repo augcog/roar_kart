@@ -1,0 +1,37 @@
+repositories:
+  arduino_comm:
+    type: git
+    url: git@gitlab.com:roar-gokart/arduino_comm.git
+    version: develop
+  central_arduino:
+    type: git
+    url: git@gitlab.com:roar-gokart/central_arduino.git
+    version: develop
+  livox_ros2_driver:
+    type: git
+    url: git@gitlab.com:roar-gokart/livox_ros2_driver.git
+    version: master
+  zed-ros2-wrapper:
+    type: git
+    url: git@gitlab.com:roar-gokart/zed-ros2-wrapper.git
+    version: develop
+  point_one_gps_driver:
+    type: git
+    url: git@gitlab.com:roar-gokart/point_one_gps_driver.git
+    version: develop
+  fusion-engine-client:
+    type: git
+    url: git@github.com:PointOneNav/fusion-engine-client.git
+    version: master
+  gokart_manual_controller:
+    type: git
+    url: git@gitlab.com:roar-gokart/gokart_manual_controller.git
+    version: develop
+  roar_gokart_msgs:
+    type: git
+    url: git@gitlab.com:roar-gokart/roar_gokart_msgs.git
+    version: develop
+  roar_robot_localization:
+    type: git
+    url: git@gitlab.com:roar-gokart/robot_localization.git
+    version: develop

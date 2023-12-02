@@ -1,0 +1,747 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Sensor1
+        - /Localization1/TF1
+        - /Localization1/TF1/Frames1
+        - /Localization1/TF1/Tree1
+        - /Env representation1/LaserScan1
+        - /Env representation1/LaserScan1/Topic1
+        - /Env representation1/Costmap1
+        - /Mapping1/Map1
+        - /Local Planning1/Best Path1
+      Splitter Ratio: 0.39679715037345886
+    Tree Height: 577
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: roar_rviz_plugin/ROARPanel
+    Name: ROARPanel
+  - Class: slam_toolbox::SlamToolboxPlugin
+    Name: SlamToolboxPlugin
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0.9941499829292297
+          Min Color: 0; 0; 0
+          Min Intensity: 0.3848784863948822
+          Name: FrontPointCloud2
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.009999999776482582
+          Style: Flat Squares
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/front/lidar
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Class: rviz_default_plugins/Image
+          Enabled: false
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: FrontRGB
+          Normalize Range: true
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/front/rgb/image
+          Value: false
+        - Class: rviz_default_plugins/Image
+          Enabled: false
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: FrontDepth
+          Normalize Range: true
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/front/depth/image
+          Value: false
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz_default_plugins/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: false
+          Keep: 100000000
+          Name: Odometry
+          Position Tolerance: 0.10000000149011612
+          Shape:
+            Alpha: 1
+            Axes Length: 1
+            Axes Radius: 0.10000000149011612
+            Color: 255; 25; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 1
+            Shaft Radius: 0.05000000074505806
+            Value: Arrow
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/odometry
+          Value: false
+        - Acceleration properties:
+            Acc. vector alpha: 0.5
+            Acc. vector color: 0; 0; 255
+            Acc. vector scale: 0.5
+            Derotate acceleration: true
+            Enable acceleration: false
+          Axes properties:
+            Axes scale: 1
+            Enable axes: true
+          Box properties:
+            Box alpha: 1
+            Box color: 255; 0; 0
+            Enable box: false
+            x_scale: 1
+            y_scale: 1
+            z_scale: 1
+          Class: rviz_imu_plugin/Imu
+          Enabled: false
+          Name: Imu
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/imu
+          Value: false
+          fixed_frame_orientation: true
+      Enabled: true
+      Name: Sensor
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Class: rviz_default_plugins/RobotModel
+          Collision Enabled: false
+          Description File: ""
+          Description Source: Topic
+          Description Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /robot_description
+          Enabled: true
+          Links:
+            All Links Enabled: true
+            Expand Joint Details: false
+            Expand Link Details: false
+            Expand Tree: false
+            Link Tree Style: Links in Alphabetic Order
+            antenna_front_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            antenna_front_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            antenna_rear_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            antenna_rear_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            base_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            body_frame_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            camera:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            center_lidar:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_front_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_front_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_platform:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_rear_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_rear_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            compute_units_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            gnss:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            gps_platform:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            perception_front_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            perception_front_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            perception_rear_left_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            perception_rear_right_stand_off:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            sensor_platform_lower:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            sensor_platform_upper:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wheel_fl_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wheel_fl_steer_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            wheel_fr_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wheel_fr_steer_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            wheel_rl_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wheel_rr_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+          Name: RobotModel
+          TF Prefix: ""
+          Update Interval: 0
+          Value: true
+          Visual Enabled: true
+        - Class: rviz_default_plugins/TF
+          Enabled: true
+          Frame Timeout: 15
+          Frames:
+            All Enabled: false
+            antenna_front_left_stand_off:
+              Value: false
+            antenna_front_right_stand_off:
+              Value: false
+            antenna_rear_left_stand_off:
+              Value: false
+            antenna_rear_right_stand_off:
+              Value: false
+            base_link:
+              Value: true
+            body_frame_link:
+              Value: false
+            camera:
+              Value: false
+            center_lidar:
+              Value: true
+            compute_front_left_stand_off:
+              Value: false
+            compute_front_right_stand_off:
+              Value: false
+            compute_platform:
+              Value: false
+            compute_rear_left_stand_off:
+              Value: false
+            compute_rear_right_stand_off:
+              Value: false
+            compute_units_link:
+              Value: false
+            ego_vehicle:
+              Value: false
+            ego_vehicle/center_lidar:
+              Value: false
+            ego_vehicle/front_depth:
+              Value: false
+            ego_vehicle/front_rgb:
+              Value: false
+            ego_vehicle/gnss_front:
+              Value: false
+            ego_vehicle/gnss_rear:
+              Value: false
+            ego_vehicle/imu:
+              Value: false
+            gnss:
+              Value: false
+            gps_platform:
+              Value: false
+            map:
+              Value: false
+            odom:
+              Value: false
+            perception_front_left_stand_off:
+              Value: false
+            perception_front_right_stand_off:
+              Value: false
+            perception_rear_left_stand_off:
+              Value: false
+            perception_rear_right_stand_off:
+              Value: false
+            sensor_platform_lower:
+              Value: false
+            sensor_platform_upper:
+              Value: false
+            wheel_fl_link:
+              Value: false
+            wheel_fl_steer_link:
+              Value: false
+            wheel_fr_link:
+              Value: false
+            wheel_fr_steer_link:
+              Value: false
+            wheel_rl_link:
+              Value: false
+            wheel_rr_link:
+              Value: false
+          Marker Scale: 10
+          Name: TF
+          Show Arrows: true
+          Show Axes: true
+          Show Names: true
+          Tree:
+            map:
+              ego_vehicle:
+                base_link:
+                  body_frame_link:
+                    {}
+                  compute_front_left_stand_off:
+                    {}
+                  compute_front_right_stand_off:
+                    {}
+                  compute_platform:
+                    antenna_front_left_stand_off:
+                      {}
+                    antenna_front_right_stand_off:
+                      {}
+                    antenna_rear_left_stand_off:
+                      {}
+                    antenna_rear_right_stand_off:
+                      {}
+                    compute_units_link:
+                      {}
+                    gps_platform:
+                      gnss:
+                        {}
+                  compute_rear_left_stand_off:
+                    {}
+                  compute_rear_right_stand_off:
+                    {}
+                  perception_front_left_stand_off:
+                    {}
+                  perception_front_right_stand_off:
+                    {}
+                  perception_rear_left_stand_off:
+                    {}
+                  perception_rear_right_stand_off:
+                    {}
+                  sensor_platform_lower:
+                    sensor_platform_upper:
+                      center_lidar:
+                        camera:
+                          {}
+                  wheel_fl_steer_link:
+                    wheel_fl_link:
+                      {}
+                  wheel_fr_steer_link:
+                    wheel_fr_link:
+                      {}
+                  wheel_rl_link:
+                    {}
+                  wheel_rr_link:
+                    {}
+                ego_vehicle/center_lidar:
+                  {}
+                ego_vehicle/front_depth:
+                  {}
+                ego_vehicle/front_rgb:
+                  {}
+                ego_vehicle/gnss_front:
+                  {}
+                ego_vehicle/gnss_rear:
+                  {}
+                ego_vehicle/imu:
+                  {}
+              odom:
+                {}
+          Update Interval: 0
+          Value: true
+      Enabled: true
+      Name: Localization
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.10000000149011612
+          Class: rviz_default_plugins/Pose
+          Color: 255; 25; 0
+          Enabled: true
+          Head Length: 2
+          Head Radius: 3
+          Name: Next Waypoint Pose
+          Shaft Length: 2
+          Shaft Radius: 1
+          Shape: Arrow
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/next_waypoint
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz_default_plugins/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: global path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/global_planning/global_path
+          Value: true
+      Enabled: true
+      Name: GlobalPlanning
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/LaserScan
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: LaserScan
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.5
+          Style: Flat Squares
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /roar/front/scan
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Class: rviz_default_plugins/Polygon
+          Color: 25; 255; 0
+          Enabled: true
+          Name: Footprint
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /local_costmap/published_footprint
+          Value: true
+        - Alpha: 0.699999988079071
+          Class: rviz_default_plugins/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Costmap
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /local_costmap/costmap
+          Update Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /local_costmap/costmap_updates
+          Use Timestamp: false
+          Value: true
+      Enabled: true
+      Name: Env representation
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz_default_plugins/Map
+          Color Scheme: map
+          Draw Behind: false
+          Enabled: true
+          Name: Map
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/map
+          Update Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/map_updates
+          Use Timestamp: false
+          Value: true
+      Enabled: true
+      Name: Mapping
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: true
+          Name: Best Path
+          Namespaces:
+            best_path: true
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /roar/local_planning/best_path
+          Value: true
+      Enabled: true
+      Name: Local Planning
+  Enabled: true
+  Global Options:
+    Background Color: 136; 138; 133
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 137.08560180664062
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 25.821226119995117
+        Y: 71.20581817626953
+        Z: 41.57929229736328
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7947960495948792
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 4.951366901397705
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  FrontDepth:
+    collapsed: false
+  FrontRGB:
+    collapsed: false
+  Height: 1043
+  Hide Left Dock: false
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd000000040000000000000234000003b9fc0200000013fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000027e000000c900fffffffb000000120052004f0041005200500061006e0065006c01000002c1000001350000006200fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001c005200650061007200200054006f007000200049006d0061006700650000000321000000ba0000000000000000fb0000001200460072006f006e007400200052004700420100000255000001860000000000000000fb0000000a0049006d0061006700650000000217000000ba0000000000000000fb0000000c00430061006d00650072006101000003c5000000160000000000000000fb0000000c00430061006d0065007200610000000000ffffffff0000000000000000fb0000001000460072006f006e00740052004700420000000395000000610000002800fffffffb0000001400460072006f006e00740044006500700074006800000003a6000000500000002800fffffffb0000001400460072006f006e007400440065007000740068010000023c000000da0000000000000000fb0000001000460072006f006e0074005200470042010000031c000000da0000000000000000fb000000220053006c0061006d0054006f006f006c0062006f00780050006c007500670069006e0000000212000001c90000018500ffffff000000010000027600000294fc0200000004fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200460072006f006e00740020005200470042000000003d000002940000000000000000fb0000000a005600690065007700730000000103000001ce000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d0065010000000000000450000000000000000000000546000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  ROARPanel:
+    collapsed: false
+  Selection:
+    collapsed: false
+  SlamToolboxPlugin:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 0
